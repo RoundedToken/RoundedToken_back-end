@@ -26,6 +26,7 @@ const start = () => {
         mongoose.set('strictQuery', false);
         mongoose.connect(process.env.DB_URL);
         app.listen(PORT, () => console.log(`Server started on ${PORT}`));
+        console.log(process.env.CLIENT_URL);
     } catch (e) {
         console.log(e);
     }
